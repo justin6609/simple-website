@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proposed Her</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <audio id="bg-music" src="wave-to-earth-love.mp3" loop hidden></audio>
+  <div class="container" id="app"></div>
+  <script>
+    const pages = {
+      main: `
+        <div style="text-align: center; margin-bottom: 10px;">
+          <button onclick="document.getElementById('bg-music').play()" style="padding:10px 20px;font-size:16px;border-radius:20px;border:none;background:#fff;color:#b97b7b;box-shadow:0 2px 8px #0002;cursor:pointer;">
+            ▶ Play Music
+          </button>
+        </div>
+        <div class="tenor-gif-embed" data-postid="22885016" data-share-method="host" data-aspect-ratio="1.04918" data-width="100%">
+          <a href="https://tenor.com/view/manja-gif-22885016">Manja Sticker</a>from
+          <a href="https://tenor.com/search/manja-stickers">Manja Stickers</a>
+        </div>
+        <h1>MAHAL MO AKO??? 🤗</h1>
+        <p>hihihi be honest plet😙</p>
+        <div class="btn">
+          <a href="#" onclick="navigate('yes')">Yes</a>
+          <a href="#" onclick="navigate('no1')">No</a>
+        </div>
+      `,
+      yes: `
+        <div style="text-align: center; margin-bottom: 10px;">
+          <button onclick="document.getElementById('bg-music').play()" style="padding:10px 20px;font-size:16px;border-radius:20px;border:none;background:#fff;color:#b97b7b;box-shadow:0 2px 8px #0002;cursor:pointer;">
+            ▶ Play Music
+          </button>
+        </div>
+        <img src="https://media.tenor.com/1yK6x9hsVJ0AAAAi/yaseen1.gif" alt="Mochi Cat GIF" style="width:100%;max-width:400px;display:block;margin:auto;">
+        <h1>HIHII I KNEW IT, I LOVE YOU SO MUCH !😙😙</h1>
+        <p>
+          Click <a href="https://anniversary99.netlify.app/" target="_blank">here</a> for a surprise!
+        </p>
+        <div class="btn">
+          <a href="#" onclick="navigate('main')">Back</a>
+        </div>
+      `,
+      no1: `
+        <div style="text-align: center; margin-bottom: 10px;">
+          <button onclick="document.getElementById('bg-music').play()" style="padding:10px 20px;font-size:16px;border-radius:20px;border:none;background:#fff;color:#b97b7b;box-shadow:0 2px 8px #0002;cursor:pointer;">
+            ▶ Play Music
+          </button>
+        </div>
+        <!-- Your GIF for no1.html -->
+        <img src="https://media.tenor.com/tzvzrz4famQAAAAj/couple-forgive-me.gif" alt="No1 GIF" style="width:100%;max-width:400px;display:block;margin:auto;">
+        <h1>JOKE lang kahit hindi kana maging honest, please love me!! 😢</h1>
+        <div class="btn">
+          <a href="#" onclick="navigate('yes')">Yes</a>
+          <a href="#" onclick="navigate('no2')">No</a>
+        </div>
+      `,
+      no2: `
+        <div style="text-align: center; margin-bottom: 10px;">
+          <button onclick="document.getElementById('bg-music').play()" style="padding:10px 20px;font-size:16px;border-radius:20px;border:none;background:#fff;color:#b97b7b;box-shadow:0 2px 8px #0002;cursor:pointer;">
+            ▶ Play Music
+          </button>
+        </div>
+        <!-- Your GIF for no2.html -->
+        <img src="https://media.tenor.com/VMgEegKQgI0AAAAj/goma-phone.gif" alt="No2 GIF" style="width:100%;max-width:400px;display:block;margin:auto;">
+        <h1> PLEASE SAY YES HIHI, PLEASE! 😭</h1>
+        <div class="btn">
+          <a href="#" onclick="navigate('yes')">Yes</a>
+          <a href="#" onclick="navigate('no3')">No</a>
+        </div>
+      `,
+      no3: `
+        <div style="text-align: center; margin-bottom: 10px;">
+          <button onclick="document.getElementById('bg-music').play()" style="padding:10px 20px;font-size:16px;border-radius:20px;border:none;background:#fff;color:#b97b7b;box-shadow:0 2px 8px #0002;cursor:pointer;">
+            ▶ Play Music
+          </button>
+        </div>
+        <!-- Your GIF for no3.html -->
+        <img src="https://media.tenor.com/MN70fG-X1jcAAAAi/angry-dudu-dudu-kill.gif" alt="No3 GIF" style="width:100%;max-width:400px;display:block;margin:auto;">
+        <h1>BAWAL NGANI MAG 'NO', 'YES' LANG DAPAT🙄🙄</h1>
+        <div class="btn">
+          <a href="#" onclick="navigate('yes')">Yes</a>
+          <a href="#" onclick="navigate('no1')">No</a>
+        </div>
+      `
+    };
+
+    function navigate(page) {
+      document.getElementById('app').innerHTML = pages[page];
+      if (page === 'main') {
+        var script = document.createElement('script');
+        script.src = "https://tenor.com/embed.js";
+        script.async = true;
+        document.body.appendChild(script);
+      }
+    }
+    navigate('main');
+  </script>
+</body>
+
+</html>
